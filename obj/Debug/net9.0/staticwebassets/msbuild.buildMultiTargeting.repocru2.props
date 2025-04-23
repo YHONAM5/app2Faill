@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\repocru2.props" />
+</Project>
