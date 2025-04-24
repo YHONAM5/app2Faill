@@ -1,7 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using repocru2.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<AppDbContext>(opcion => opcion.UseSqlServer(builder.Configuration.GetConnectionString("CadenaSome")));
 
 var app = builder.Build();
 
